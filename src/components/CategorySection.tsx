@@ -22,7 +22,7 @@ export function CategorySection() {
               <div className="space-y-4 p-5">
                 <h3 className="text-xl font-black text-stone-950">{category.title}</h3>
                 <p className="min-h-12 text-sm leading-6 text-stone-600">{category.description}</p>
-                <a href="#catalog" className="inline-flex rounded-full bg-stone-950 px-4 py-2 text-sm font-bold text-white transition hover:bg-rose-900">
+                <a href="#catalog" className="inline-flex h-10 items-center justify-center rounded-full bg-stone-950 px-4 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-900">
                   Виж предложения
                 </a>
               </div>

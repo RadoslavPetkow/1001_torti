@@ -18,10 +18,10 @@ export function Contact() {
             <p className="flex gap-3"><Icon name="calendar" className="mt-1 h-5 w-5 text-rose-200" /> Отворено до 19:00</p>
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={business.maps} target="_blank" rel="noreferrer" className="rounded-full bg-white px-6 py-4 text-center font-black text-stone-950 transition hover:bg-rose-100">
+            <a href={business.maps} target="_blank" rel="noreferrer" className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-center text-sm font-black text-stone-950 shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-100">
               Google Maps
             </a>
-            <a href={`tel:${business.tel}`} className="rounded-full border border-white/20 px-6 py-4 text-center font-black text-white transition hover:bg-white/10">
+            <a href={`tel:${business.tel}`} className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 px-6 text-center text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-white/10">
               Обади се
             </a>
           </div>

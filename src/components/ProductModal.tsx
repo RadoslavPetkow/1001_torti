@@ -26,7 +26,7 @@ export function ProductModal({ product, onClose, onInquire }: ProductModalProps)
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-white/90 text-stone-800 shadow-lg transition hover:bg-white"
+              className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-stone-800 shadow-md transition hover:bg-white"
               aria-label="Затвори"
             >
               <Icon name="close" className="h-5 w-5" />
@@ -57,7 +57,7 @@ export function ProductModal({ product, onClose, onInquire }: ProductModalProps)
                 <p className="mb-3 text-sm font-semibold text-stone-800">Порции</p>
                 <div className="grid grid-cols-2 gap-2">
                   {portions.map((item) => (
-                    <button key={item} className="rounded-2xl border border-stone-200 px-3 py-2 text-sm text-stone-700 transition hover:border-rose-300 hover:bg-rose-50">
+                    <button key={item} className="h-10 rounded-xl border border-stone-200 bg-white px-3 text-sm font-semibold text-stone-700 transition hover:border-rose-300 hover:bg-rose-50">
                       {item}
                     </button>
                   ))}
@@ -67,7 +67,7 @@ export function ProductModal({ product, onClose, onInquire }: ProductModalProps)
                 <p className="mb-3 text-sm font-semibold text-stone-800">Вкус</p>
                 <div className="grid grid-cols-2 gap-2">
                   {flavors.map((item) => (
-                    <button key={item} className="rounded-2xl border border-stone-200 px-3 py-2 text-sm text-stone-700 transition hover:border-amber-300 hover:bg-amber-50">
+                    <button key={item} className="h-10 rounded-xl border border-stone-200 bg-white px-3 text-sm font-semibold text-stone-700 transition hover:border-amber-300 hover:bg-amber-50">
                       {item}
                     </button>
                   ))}
@@ -78,7 +78,7 @@ export function ProductModal({ product, onClose, onInquire }: ProductModalProps)
             <button
               type="button"
               onClick={() => onInquire(product.name)}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-stone-950 px-6 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-rose-900"
+              className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-stone-950 px-6 text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-rose-900"
             >
               <Icon name="bag" className="h-5 w-5" />
               Запитай за тази торта

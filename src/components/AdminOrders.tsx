@@ -66,10 +66,10 @@ export function AdminOrders({
                     <td className="px-5 py-4 font-black text-stone-950">{order.price}</td>
                     <td className="px-5 py-4">
                       <div className="flex gap-2">
-                        <button onClick={() => setSelected(order)} className="grid h-10 w-10 place-items-center rounded-full border border-stone-200 text-stone-700 transition hover:bg-white" aria-label="Детайли">
+                        <button onClick={() => setSelected(order)} className="grid h-9 w-9 place-items-center rounded-full border border-stone-200 bg-white text-stone-700 transition hover:border-rose-200 hover:bg-rose-50" aria-label="Детайли">
                           <Icon name="eye" className="h-4 w-4" />
                         </button>
-                        <a href={`tel:${order.phone.replace(/\s/g, "")}`} className="grid h-10 w-10 place-items-center rounded-full bg-stone-950 text-white transition hover:bg-rose-900" aria-label="Обади се">
+                        <a href={`tel:${order.phone.replace(/\s/g, "")}`} className="grid h-9 w-9 place-items-center rounded-full bg-stone-950 text-white transition hover:bg-rose-900" aria-label="Обади се">
                           <Icon name="phone" className="h-4 w-4" />
                         </a>
                       </div>
@@ -117,7 +117,7 @@ function OrderDrawer({
             <h3 className="mt-2 text-3xl font-black text-stone-950">{order.customerName}</h3>
             <p className="mt-1 font-semibold text-stone-500">{order.phone}</p>
           </div>
-          <button onClick={onClose} className="grid h-11 w-11 place-items-center rounded-full bg-stone-100 text-stone-700" aria-label="Затвори">
+          <button onClick={onClose} className="grid h-10 w-10 place-items-center rounded-full bg-stone-100 text-stone-700 transition hover:bg-stone-200" aria-label="Затвори">
             <Icon name="close" className="h-5 w-5" />
           </button>
         </div>
@@ -148,7 +148,7 @@ function OrderDrawer({
           <span className="mb-2 block text-sm font-black text-stone-800">Вътрешна бележка</span>
           <textarea value={note} onChange={(event) => setNote(event.target.value)} rows={4} className="w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 font-semibold outline-none" />
         </label>
-        <button onClick={() => onSave(status, note)} className="mt-5 w-full rounded-full bg-rose-900 px-6 py-4 font-black text-white transition hover:bg-stone-950">
+        <button onClick={() => onSave(status, note)} className="mt-5 flex h-12 w-full items-center justify-center rounded-full bg-rose-900 px-6 text-sm font-black text-white transition hover:bg-stone-950">
           Запази промените
         </button>
       </aside>

@@ -96,7 +96,7 @@ export function InquiryForm({ selectedCake }: { selectedCake: string }) {
               placeholder="Цветове, тема, доставка, особености..."
             />
           </label>
-          <button type="submit" className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-rose-900 px-6 py-4 font-black text-white shadow-lg shadow-rose-900/20 transition hover:-translate-y-0.5 hover:bg-stone-950">
+          <button type="submit" className="mt-5 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-rose-900 px-6 text-sm font-black text-white shadow-lg shadow-rose-900/18 transition hover:-translate-y-0.5 hover:bg-stone-950">
             <Icon name="bag" className="h-5 w-5" />
             Изпрати заявка
           </button>

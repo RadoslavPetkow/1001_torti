@@ -89,8 +89,8 @@ export function Catalog({ onSelectCake }: { onSelectCake: (cake: string) => void
               key={filter}
               type="button"
               onClick={() => setActiveFilter(filter)}
-              className={`shrink-0 rounded-full px-5 py-3 text-sm font-black transition ${
-                activeFilter === filter ? "bg-rose-900 text-white shadow-lg shadow-rose-900/20" : "bg-stone-100 text-stone-700 hover:bg-rose-50 hover:text-rose-900"
+              className={`h-10 shrink-0 rounded-full px-4 text-sm font-black transition ${
+                activeFilter === filter ? "bg-rose-900 text-white shadow-md shadow-rose-900/18" : "bg-white/80 text-stone-700 ring-1 ring-stone-200 hover:bg-rose-50 hover:text-rose-900"
               }`}
             >
               {filter}
@@ -129,11 +129,11 @@ export function Catalog({ onSelectCake }: { onSelectCake: (cake: string) => void
                       </span>
                     ))}
                   </div>
-                  <div className="mt-5 grid grid-cols-[1fr_auto] gap-2">
-                    <button type="button" onClick={() => handleInquire(product.name)} className="rounded-full bg-stone-950 px-4 py-3 text-sm font-black text-white transition hover:bg-rose-900">
+                  <div className="mt-5 grid gap-2 sm:grid-cols-[1fr_auto]">
+                    <button type="button" onClick={() => handleInquire(product.name)} className="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full bg-stone-950 px-4 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-900">
                       Запитай за тази торта
                     </button>
-                    <button type="button" onClick={() => setSelectedProduct(product)} className="rounded-full border border-stone-200 px-4 py-3 text-sm font-black text-stone-800 transition hover:border-rose-200 hover:bg-rose-50">
+                    <button type="button" onClick={() => setSelectedProduct(product)} className="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full border border-stone-200 bg-white px-4 text-sm font-black text-stone-800 transition hover:border-rose-200 hover:bg-rose-50">
                       Детайли
                     </button>
                   </div>

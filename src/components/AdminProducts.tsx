@@ -15,7 +15,7 @@ export function AdminProducts() {
           <h2 className="text-2xl font-black text-stone-950">Торти в каталога</h2>
           <p className="text-sm font-semibold text-stone-500">Демо управление на продукти, видимост и популярни предложения.</p>
         </div>
-        <button onClick={() => setOpen(true)} className="rounded-full bg-stone-950 px-5 py-3 font-black text-white transition hover:bg-rose-900">
+        <button onClick={() => setOpen(true)} className="inline-flex h-11 items-center justify-center rounded-full bg-stone-950 px-5 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-900">
           Добави торта
         </button>
       </div>
@@ -42,7 +42,7 @@ export function AdminProducts() {
                   <td className="px-5 py-4">
                     <div className="flex gap-2">
                       {(["edit", "eye", "copy"] as const).map((icon) => (
-                        <button key={icon} className="grid h-10 w-10 place-items-center rounded-full border border-stone-200 text-stone-700 transition hover:bg-white" aria-label="Действие">
+                        <button key={icon} className="grid h-9 w-9 place-items-center rounded-full border border-stone-200 bg-white text-stone-700 transition hover:border-rose-200 hover:bg-rose-50" aria-label="Действие">
                           <Icon name={icon} className="h-4 w-4" />
                         </button>
                       ))}
@@ -63,7 +63,7 @@ export function AdminProducts() {
                 <p className="text-sm font-black uppercase tracking-[0.18em] text-rose-800">Демо форма</p>
                 <h3 className="mt-2 text-3xl font-black text-stone-950">Добави торта</h3>
               </div>
-              <button onClick={() => setOpen(false)} className="grid h-10 w-10 place-items-center rounded-full bg-stone-100" aria-label="Затвори">
+              <button onClick={() => setOpen(false)} className="grid h-10 w-10 place-items-center rounded-full bg-stone-100 text-stone-700 transition hover:bg-stone-200" aria-label="Затвори">
                 <Icon name="close" className="h-5 w-5" />
               </button>
             </div>
@@ -81,7 +81,7 @@ export function AdminProducts() {
                 </label>
               ))}
             </div>
-            <button onClick={() => setOpen(false)} className="mt-6 w-full rounded-full bg-rose-900 px-6 py-4 font-black text-white transition hover:bg-stone-950">
+            <button onClick={() => setOpen(false)} className="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-rose-900 px-6 text-sm font-black text-white transition hover:bg-stone-950">
               Запази демо продукт
             </button>
           </div>

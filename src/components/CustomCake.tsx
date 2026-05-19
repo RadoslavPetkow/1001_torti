@@ -25,7 +25,7 @@ export function CustomCake({ onCustom }: { onCustom: () => void }) {
           <button
             type="button"
             onClick={onCustom}
-            className="mt-8 rounded-full bg-white px-7 py-4 font-black text-stone-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-rose-100"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-black text-stone-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-rose-100"
           >
             Изпрати custom запитване
           </button>

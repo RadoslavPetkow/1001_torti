@@ -31,8 +31,8 @@ export function AdminDashboard() {
       <div className="flex min-h-screen">
         <aside className="hidden w-72 shrink-0 border-r border-stone-200/80 bg-white/92 p-5 shadow-[12px_0_45px_rgba(15,23,42,0.035)] backdrop-blur lg:block">
           <Link href="/" className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-rose-900 text-white">
-              <Icon name="cake" className="h-6 w-6" />
+            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-rose-900 text-white shadow-sm">
+              <Icon name="cake" className="h-5 w-5" />
             </span>
             <span>
               <span className="block font-black text-stone-950">{business.name}</span>
@@ -44,8 +44,8 @@ export function AdminDashboard() {
               <button
                 key={item}
                 onClick={() => setActive(item)}
-                className={`flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-black transition ${
-                  active === item ? "bg-rose-900 text-white shadow-lg shadow-rose-900/20" : "text-stone-600 hover:bg-stone-100 hover:text-stone-950"
+                className={`flex h-11 w-full items-center gap-3 rounded-xl px-3 text-left text-sm font-black transition ${
+                  active === item ? "bg-rose-900 text-white shadow-md shadow-rose-900/16" : "text-stone-600 hover:bg-stone-100 hover:text-stone-950"
                 }`}
               >
                 <Icon name={item === "Торти" ? "products" : item === "Настройки" ? "settings" : item === "Клиенти" ? "user" : "orders"} className="h-5 w-5" />
@@ -64,11 +64,11 @@ export function AdminDashboard() {
               </div>
               <div className="flex gap-2 overflow-x-auto">
                 {nav.map((item) => (
-                  <button key={item} onClick={() => setActive(item)} className={`shrink-0 rounded-full px-4 py-2 text-sm font-black lg:hidden ${active === item ? "bg-stone-950 text-white" : "bg-stone-100 text-stone-700"}`}>
+                  <button key={item} onClick={() => setActive(item)} className={`h-10 shrink-0 rounded-full px-4 text-sm font-black lg:hidden ${active === item ? "bg-stone-950 text-white shadow-sm" : "bg-white text-stone-700 ring-1 ring-stone-200"}`}>
                     {item}
                   </button>
                 ))}
-                <Link href="/" className="shrink-0 rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-black text-stone-800">Към сайта</Link>
+                <Link href="/" className="inline-flex h-10 shrink-0 items-center rounded-full border border-stone-200 bg-white px-4 text-sm font-black text-stone-800 transition hover:bg-rose-50">Към сайта</Link>
               </div>
             </div>
           </header>
@@ -151,7 +151,7 @@ function Categories({ onViewProducts }: { onViewProducts: () => void }) {
         <button
           type="button"
           onClick={() => setEditingCategory("Нова категория")}
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-stone-950 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-900"
+          className="inline-flex h-11 items-center justify-center rounded-full bg-stone-950 px-5 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-900"
         >
           Добави категория
         </button>
@@ -196,14 +196,14 @@ function Categories({ onViewProducts }: { onViewProducts: () => void }) {
                 <button
                   type="button"
                   onClick={() => setEditingCategory(category.name)}
-                  className="rounded-full border border-stone-200 bg-white px-4 py-3 text-sm font-black text-stone-800 transition hover:border-rose-200 hover:bg-rose-50"
+                  className="inline-flex h-10 items-center justify-center rounded-full border border-stone-200 bg-white px-4 text-sm font-black text-stone-800 transition hover:border-rose-200 hover:bg-rose-50"
                 >
                   Редактирай
                 </button>
                 <button
                   type="button"
                   onClick={onViewProducts}
-                  className="rounded-full bg-stone-950 px-4 py-3 text-sm font-black text-white transition hover:bg-rose-900"
+                  className="inline-flex h-10 items-center justify-center rounded-full bg-stone-950 px-4 text-sm font-black text-white transition hover:bg-rose-900"
                 >
                   Виж торти
                 </button>
@@ -221,7 +221,7 @@ function Categories({ onViewProducts }: { onViewProducts: () => void }) {
                 <p className="text-sm font-black uppercase tracking-[0.18em] text-rose-800">Демо управление</p>
                 <h3 className="mt-2 text-3xl font-black text-stone-950">{editingCategory}</h3>
               </div>
-              <button onClick={() => setEditingCategory(null)} className="grid h-10 w-10 place-items-center rounded-full bg-stone-100" aria-label="Затвори">
+              <button onClick={() => setEditingCategory(null)} className="grid h-10 w-10 place-items-center rounded-full bg-stone-100 text-stone-700 transition hover:bg-stone-200" aria-label="Затвори">
                 <Icon name="close" className="h-5 w-5" />
               </button>
             </div>
@@ -240,7 +240,7 @@ function Categories({ onViewProducts }: { onViewProducts: () => void }) {
                 Активна категория
               </label>
             </div>
-            <button onClick={() => setEditingCategory(null)} className="mt-6 w-full rounded-full bg-rose-900 px-6 py-4 font-black text-white transition hover:bg-stone-950">
+            <button onClick={() => setEditingCategory(null)} className="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-rose-900 px-6 text-sm font-black text-white transition hover:bg-stone-950">
               Запази демо категория
             </button>
           </div>

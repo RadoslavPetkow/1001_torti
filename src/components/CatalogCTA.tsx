@@ -20,7 +20,7 @@ export function CatalogCTA() {
             </div>
             <a
               href="#inquiry"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-rose-900 px-7 py-4 text-center font-black text-white shadow-lg shadow-rose-900/20 transition hover:-translate-y-0.5 hover:bg-stone-950 sm:w-auto"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-rose-900 px-6 text-center text-sm font-black text-white shadow-lg shadow-rose-900/18 transition hover:-translate-y-0.5 hover:bg-stone-950 sm:w-auto"
             >
               Изпрати заявка
             </a>

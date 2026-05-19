@@ -30,10 +30,10 @@ export function Hero() {
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="#catalog" className="rounded-full bg-stone-950 px-7 py-4 text-center font-bold text-white shadow-xl shadow-stone-950/15 transition hover:-translate-y-0.5 hover:bg-rose-900">
+            <a href="#catalog" className="inline-flex h-12 items-center justify-center rounded-full bg-stone-950 px-6 text-center text-sm font-black text-white shadow-lg shadow-stone-950/14 transition hover:-translate-y-0.5 hover:bg-rose-900">
               Разгледай каталога
             </a>
-            <a href={`tel:${business.tel}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-200 bg-white px-7 py-4 font-bold text-stone-900 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:bg-rose-50">
+            <a href={`tel:${business.tel}`} className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-stone-200 bg-white/85 px-6 text-sm font-black text-stone-900 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:bg-rose-50">
               <Icon name="phone" className="h-5 w-5" />
               Обади се
             </a>

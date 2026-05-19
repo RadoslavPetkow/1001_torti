@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffaf7;
+  --foreground: #231915;
 }
 
 @theme inline {
@@ -12,15 +12,95 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  background:
+    radial-gradient(circle at 8% 6%, rgba(250, 218, 221, 0.42), transparent 28rem),
+    radial-gradient(circle at 92% 12%, rgba(214, 168, 90, 0.2), transparent 24rem),
+    radial-gradient(circle at 50% 100%, rgba(247, 231, 206, 0.5), transparent 32rem),
+    linear-gradient(135deg, #fff8f1 0%, #fffdf9 48%, #fff6f7 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    radial-gradient(circle, rgba(90, 53, 42, 0.055) 0 0.7px, transparent 0.9px),
+    radial-gradient(circle, rgba(217, 79, 112, 0.05) 0 0.55px, transparent 0.8px);
+  background-position:
+    0 0,
+    18px 22px;
+  background-size:
+    42px 42px,
+    58px 58px;
+  opacity: 0.34;
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.35));
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: #9f1239;
+  color: white;
+}
+
+@keyframes softIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes confettiFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--tw-rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-8px) rotate(var(--tw-rotate, 0deg));
+  }
+}
+
+section,
+article {
+  animation: softIn 0.45s ease both;
+}
+
+.bakery-dots {
+  background-image:
+    radial-gradient(circle, rgba(90, 53, 42, 0.16) 0 0.8px, transparent 1px),
+    radial-gradient(circle, rgba(217, 79, 112, 0.12) 0 0.65px, transparent 0.9px);
+  background-position:
+    0 0,
+    24px 28px;
+  background-size:
+    54px 54px,
+    72px 72px;
 }
